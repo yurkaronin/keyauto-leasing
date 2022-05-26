@@ -18,6 +18,17 @@
   font-family: var(--fontFam1);
   text-decoration: none;
 
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+  }
+
+  @media (max-width: 550px) {
+    width: 40px;
+    height: 40px;
+  }
+
   &:hover,
   &:active,
   &:focus {
@@ -53,4 +64,12 @@
 .pagination__item--more .pagination__link {
   border: none;
   align-items: flex-end;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent !important;
+    border: none;
+  }
+
 }
