@@ -22,17 +22,18 @@
 </head>
 
 <body class="body">
+
   <header class="header">
-    <div class="header__global-grid global-grid">
+    <div class="wrapper">
 
       <div class="header__logo">
         <img src="img/logo/1.svg" alt="Логотип КЛЮЧАВТО" width="302">
       </div>
 
-      <nav class="header__nav nav">
-        <ul class="nav__list list-reset">
-          <li class="nav__item"><a class="nav__link" href="">Новые авто</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Авто с пробегом</a></li>
+      <nav class="header__nav">
+        <ul class="header__nav-list list-reset">
+          <li class="header__nav-item"><a class="header__nav-link" href="">Новые авто</a></li>
+          <li class="header__nav-item"><a class="header__nav-link" href="#">Авто с пробегом</a></li>
         </ul>
       </nav>
 
@@ -41,126 +42,135 @@
       </div>
     </div>
   </header>
+
   <main class="main">
-    <section class="filter">
-      <div class="global-grid">
-        <div class="filter__title">
-          <h1 class="title">Автомобили в лизинг</h1>
-        </div>
+    <div class="wrapper">
+      <h1 class="main__title title">Автомобили в лизинг</h1>
+      <div class="main__filter">
+        <form>
+          <ul class="filter-list list-reset">
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Марка</label>
+              <select class="js-choice" name="car-brand" id="car-brand">
+                <!-- <option placeholder>Марка</option> -->
+                <option value="Все марки" selected>Все марки</option>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Changan">Changan</option>
+                <option value="Chery">Chery</option>
+                <option value="Geely">Geely</option>
+                <option value="Great Wall">Great Wall</option>
+              </select>
+            </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Модель</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Все модели" selected>Все модели</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-        <div class="filter__list">
-          <form>
-            <ul class="filter-list list-reset">
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Марка</label>
-                <select class="js-choice" name="car-brand" id="car-brand" multiple>
-                  <!-- <option placeholder>Марка</option> -->
-                  <option value="Audi" selected>Audi</option>
-                  <option value="BMW">BMW</option>
-                  <option value="Changan">Changan</option>
-                  <option value="Chery">Chery</option>
-                  <option value="Geely">Geely</option>
-                  <option value="Great Wall">Great Wall</option>
-                </select>
-              </li>
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Модель</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Комплектация</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Все комплектации" selected>Все комплектации</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Комплектация</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">КПП</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Все КПП" selected>Все КПП</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">КПП</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-privod">Привод</label>
+              <select class="js-choice" name="car-privod" id="car-privod">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">КПП</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Год выпуска</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Год выпуска</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Кузов</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Кузов</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Тип двигателя</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Тип двигателя</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Мощность</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Мощность</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Цвет авто</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Цвет авто</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item">
+              <label class="filter-list__label" for="car-model">Цвет салона</label>
+              <select class="js-choice" name="car-model" id="car-model">
+                <option value="Смотреть все" selected>Смотреть все</option>
+                <option value="value1">Audi</option>
+                <option value="value2">BMW</option>
+                <option value="value3">Changan</option>
+              </select>
+            </li>
 
-              <li class="filter-list__item">
-                <label class="filter-list__label" for="car-model">Цвет салона</label>
-                <select class="js-choice" name="car-model" id="car-model" multiple>
-                  <option value="value1">Audi</option>
-                  <option value="value2">BMW</option>
-                  <option value="value3">Changan</option>
-                </select>
-              </li>
+            <li class="filter-list__item filter-list__item--button">
+              <button class="button button-black" type="submit">Показать авто</button>
+            </li>
+          </ul>
+        </form>
+      </div>
 
-              <li class="filter-list__item filter-list__item--button">
-                <button class="button button-black" type="submit">Показать авто</button>
-              </li>
-            </ul>
-          </form>
-        </div>
-
-        <table class="custom-table">
+      <div class="main__table">
+        <table>
           <tbody>
             <tr>
               <th>Автомобиль</th>
@@ -175,16 +185,20 @@
               <th>Цена</th>
               <th></th>
             </tr>
+
             <tr>
               <td class="custom-table__first">
-                <img src="img/cars/min/1.jpg" alt="автомобиль">
-                <a href="#">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="7" width="2" height="16" fill="#A50034" />
-                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
-                  </svg>
-                </a>
-                <span>BMW X5 M Competition M Special</span>
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
               </td>
               <td>XW8ZZZF17MG001214</td>
               <td>Дизель, 7,2 л.</td>
@@ -193,23 +207,1555 @@
               <td>2022</td>
               <td>Белый</td>
               <td>Черный</td>
-              <td><a href="#">
+              <td><a class="custom-table__link" href="#">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="7" width="2" height="16" fill="#A50034" />
                     <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
                   </svg>
                   <span>Смотреть</span></a></td>
-              <td>5 000 800 ₽</td>
-              <td class="custom-table__button"><a class="button"  href="#">Получить КП</a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/3.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Haval F7x I</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001215</td>
+              <td>Бензин, 4,0 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">3 224 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/4.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Audi Q5 45 TFSI II (FY) Рестайлинг</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001212</td>
+              <td>Дизель, 5,0 л.</td>
+              <td>МКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2021</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">7 200 000 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/1.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>BMW X5 M Competition M Special</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001214</td>
+              <td>Дизель, 7,2 л.</td>
+              <td>АКПП</td>
+              <td>Внедорожник 5 дв.</td>
+              <td>2022</td>
+              <td>Белый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">5 000 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
+            </tr>
+            <tr>
+              <td class="custom-table__first">
+                <div class="custom-table__wrapper">
+                  <img src="img/cars/min/2.jpg" alt="автомобиль">
+                  <a class="custom-table__link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="7" width="2" height="16" fill="#A50034" />
+                      <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                    </svg>
+                    <span>Mercedes-Benz E 200 4MATIC Sport</span>
+                  </a>
+                </div>
+
+              </td>
+              <td>XW8ZZZF17MG001218</td>
+              <td>Бензин, 5,6 л.</td>
+              <td>МКПП</td>
+              <td>Седан 5 дв.</td>
+              <td>2021</td>
+              <td>Серый</td>
+              <td>Черный</td>
+              <td><a class="custom-table__link" href="#">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#A50034" />
+                    <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#A50034" />
+                  </svg>
+                  <span>Смотреть</span></a></td>
+              <td class="custom-table__price">13 323 800 ₽</td>
+              <td class="custom-table__button"><a class="button" href="#">Получить КП</a></td>
             </tr>
           </tbody>
         </table>
       </div>
-    </section>
+
+      <a class="main__more-link button" href="#">Загрузить еще</a>
+
+      <div class="pagination">
+        <ul class="pagination__list list-reset">
+          <li class="pagination__item pagination__item--prew">
+            <a class="pagination__link"  href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 15.8333L6.69736 10.0307L12.5 4.22806" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </a>
+          </li>
+
+          <li class="pagination__item">
+            <a class="pagination__link"  href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link"  href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link"  href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link"  href="#">4</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link"  href="#">5</a>
+          </li>
+          <li class="pagination__item pagination__item--more">
+            <a class="pagination__link"  href="#">
+              <svg width="32" height="4" viewBox="0 0 32 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="4" height="4" fill="#212322"/>
+                <rect x="14" width="4" height="4" fill="#212322"/>
+                <rect x="28" width="4" height="4" fill="#212322"/>
+                </svg>
+
+            </a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link"  href="#">123</a>
+          </li>
+
+          <li class="pagination__item pagination__item--next">
+            <a class="pagination__link"  href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 4.16666L13.3026 9.9693L7.5 15.7719" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </main>
 
   <footer class="footer">
-
+    <div class="wrapper">
+      <div class="footer__logo">
+        <img src="img/logo/2.svg" alt="Логотип">
+      </div>
+      <p class="footer__text">© КЛЮЧАВТО, 2022. Все права защищены.</p>
+      <div class="footer__contacts">
+        <a class="tel" href="tel:88005051949">8 (800) 505-19-49</a>
+      </div>
+    </div>
   </footer>
 
   <div class="modal">
