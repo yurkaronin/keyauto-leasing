@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--fontFam1), sans-serif;
+  font-size: var(--fontSizeBase);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--color6);
+  font-weight: 400;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a,
+button {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
