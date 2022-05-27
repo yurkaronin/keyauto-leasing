@@ -56,4 +56,9 @@
 
 .header__nav {
   flex-grow: 2;
+  margin-left: 144px;
+
+  @media (max-width: 1440px) {
+    margin: 0 auto;
+  }
 }
