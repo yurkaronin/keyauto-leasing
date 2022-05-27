@@ -19,8 +19,13 @@
     font-size: 1.2em;
     line-height: inherit;
     color: var(--color1);
-
+    opacity: 1;
+    &.active,
+    &:not([href]) {
+      opacity: 0.7;
+    }
   }
+
 }
 
 .header .wrapper {
