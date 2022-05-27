@@ -22,12 +22,19 @@ MicroModal.init({
   awaitCloseAnimation: true
 })
 
-const mainTable = document.querySelector('.main__table');
-if (mainTable) {
-  mainTable.on("scroll", function (e) {
-    // horizontal = e.currentTarget.scrollLeft;
-    // vertical = e.currentTarget.scrollTop;
-    console.log('wow');
-    });
+/* const mainTable = document.querySelector('.main__table');
+if (mainTable.scrollLeft) {
+  console.log('wow');
+} */
+
+let filterShow = document.querySelector('.filter-show');
+let filterList = document.querySelector('.filter-list');
+if(filterShow) {
+  filterShow.onclick = function() {
+    filterList.classList.toggle('show-all');
+    // filterList.style.height = 90;
+    // filterList.style.overflow = hidden;
+  };
+
 }
 

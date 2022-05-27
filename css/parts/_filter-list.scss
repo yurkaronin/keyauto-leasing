@@ -3,6 +3,13 @@
   flex-wrap: wrap;
   gap: var(--grid-gap);
   justify-content: space-between;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+
+  &.show-all {
+    height: 75px;
+    overflow: hidden;
+  }
 
   @media (max-width: 1300px) {
     gap:10px;
