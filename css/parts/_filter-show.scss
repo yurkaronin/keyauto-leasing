@@ -1,10 +1,14 @@
 .filter-show {
-  border-bottom-left-radius: 1.25rem;
-  background-color: #A50034;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  cursor: pointer;
+  display: none;
+
+  @media (max-width: 670px) {
+    border-bottom-left-radius: 1.25rem;
+    background-color: #A50034;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
 }

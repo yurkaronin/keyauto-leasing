@@ -5,14 +5,15 @@
   justify-content: space-between;
   margin-bottom: 20px;
   transition: all 0.5s;
+  height: auto;
 
-  &.show-all {
+  /* &.show-all {
     height: 75px;
     overflow: hidden;
-  }
+  } */
 
   @media (max-width: 1300px) {
-    gap:10px;
+    gap: 10px;
   }
 
   &__label {
@@ -39,6 +40,7 @@
     @media (max-width: 450px) {
       width: 100%;
     }
+
   }
 
   &__item--button {
@@ -49,4 +51,12 @@
       padding: 10px 20px;
     }
   }
+}
+
+.filter-list .filter-list__item--mod {
+  display: none;
+}
+
+.filter-list.show-all .filter-list__item--mod {
+  display: block;
 }

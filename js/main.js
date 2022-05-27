@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   let filterShow = document.querySelector('.filter-show');
   let filterList = document.querySelector('.filter-list');
-  if (filterShow) {
-    filterShow.onclick = function () {
-      filterList.classList.toggle('show-all');
-    };
-
-  }
 
   if (window.innerWidth <= 670) {
-    filterList.classList.add('show-all');
-  } else {
     filterList.classList.remove('show-all');
+
+  } else {
+    filterList.classList.add('show-all');
   }
+
+  filterShow.onclick = function () {
+    filterList.classList.toggle('show-all');
+    // location.reload();
+  };
 
   const customSelects = () => {
     const elements = document.querySelectorAll('.js-choice');
