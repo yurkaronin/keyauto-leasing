@@ -17,7 +17,7 @@
 
 .main__table {
   max-width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
 
   table {
     border-collapse: collapse;
@@ -139,4 +139,10 @@
 
 .main__table {
   margin-bottom: 40px;
+  transform: rotateX(180deg);
 }
+
+.main__table table {
+  transform: rotateX(180deg);
+}
+
