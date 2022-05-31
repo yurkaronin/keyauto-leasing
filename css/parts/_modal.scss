@@ -2,7 +2,7 @@
   font-family: var(--fontFam1), sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.06em;
+  font-size: 1.1em;
   line-height: 110%;
   letter-spacing: 0.01em;
   color: var(--color7);
@@ -161,10 +161,10 @@
   animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
 }
 
-.micromodal-slide .modal__container,
-.micromodal-slide .modal__overlay {
-  will-change: transform;
-}
+// .micromodal-slide .modal__container,
+// .micromodal-slide .modal__overlay {
+//   will-change: transform;
+// }
 
 // Персонализация
 
@@ -185,7 +185,7 @@
     width: 100%;
 
     &--mod {
-      margin-top: 0;
+      margin-top: 95px;
     }
   }
 
