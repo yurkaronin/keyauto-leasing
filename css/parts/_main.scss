@@ -112,7 +112,6 @@
 }
 
 .main__more-link {
-  display: block;
   background-color: transparent;
   width: 100%;
   max-width: 100%;
@@ -150,3 +149,23 @@
   transform: rotateX(180deg);
 }
 
+.custom-table__first {
+
+  .custom-table__wrapper {
+    max-width: 420px;
+    white-space: initial;
+  }
+
+
+  img {
+    max-width: 80px;
+  }
+
+  a {
+    line-height: 1.5;
+  }
+
+  .custom-table__link svg {
+    width: 30px;
+  }
+}
