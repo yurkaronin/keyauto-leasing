@@ -27,3 +27,26 @@
 @import "parts/choices";
 
 
+.table-head__wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.sort-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
